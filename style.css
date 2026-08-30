@@ -1,0 +1,850 @@
+/* =========================================================
+   KEUR YAYE MAREME BUSINESS
+   DESIGN MODERNE - MARRON & OR
+   ========================================================= */
+
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #faf7f2;
+    color: #2f241d;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 6%;
+
+    background: #2b1d16;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-circle {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #d6a84f;
+    border-radius: 50%;
+
+    color: #d6a84f;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo h1 {
+    color: #f2c46d;
+    font-size: 17px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: white;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+
+/* NAVIGATION */
+
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.header nav a:hover {
+    color: #e2b45c;
+}
+
+
+/* PANIER */
+
+.cart-button {
+    border: none;
+    cursor: pointer;
+
+    padding: 11px 18px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #e7b85c,
+        #c78c32
+    );
+
+    color: #2b1d16;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.cart-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   ACCUEIL
+   ========================= */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(35, 23, 17, 0.68),
+            rgba(35, 23, 17, 0.68)
+        ),
+        url("images/gowe-5000-1.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-content {
+    max-width: 650px;
+
+    color: white;
+}
+
+
+.small-title {
+    display: inline-block;
+
+    margin-bottom: 15px;
+    padding: 7px 15px;
+
+    border: 1px solid #e4b65e;
+    border-radius: 30px;
+
+    color: #f2c46d;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.hero h2 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+    color: white;
+}
+
+.hero h2 span {
+    color: #e5b45c;
+}
+
+
+.hero-content > p:not(.small-title) {
+    max-width: 580px;
+
+    margin-bottom: 30px;
+
+    color: #f5eee7;
+
+    font-size: 18px;
+}
+
+
+.hero-button {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background: #d9a74d;
+    color: #251912;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SECTION TITRE
+   ========================= */
+
+.section-title {
+    text-align: center;
+
+    padding: 80px 20px 35px;
+}
+
+.section-title p {
+    color: #b17b2f;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    margin: 8px 0;
+
+    font-size: 42px;
+
+    color: #35231a;
+}
+
+.section-title span {
+    color: #806f63;
+}
+
+
+/* =========================
+   PRODUITS
+   ========================= */
+
+.shop {
+    padding-bottom: 90px;
+}
+
+.products {
+    width: 88%;
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* CARTE */
+
+.product {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 18px;
+
+    border: 1px solid #eadfd5;
+
+    box-shadow: 0 8px 25px rgba(54, 36, 25, 0.08);
+
+    transition: 0.35s;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(54, 36, 25, 0.16);
+}
+
+
+/* IMAGE */
+
+.product-image {
+    position: relative;
+
+    height: 310px;
+
+    overflow: hidden;
+
+    background: #eee;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.product:hover .product-image img {
+    transform: scale(1.06);
+}
+
+
+/* BADGES */
+
+.badge {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 7px 13px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    background: #e0ad51;
+    color: #2c1c13;
+}
+
+.badge.promo {
+    background: #fff;
+    color: #76511e;
+}
+
+.badge.nouveau {
+    background: #e0ad51;
+}
+
+
+/* CONTENU */
+
+.product-content {
+    padding: 22px;
+}
+
+.product-content small {
+    color: #b18a54;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.product-content h3 {
+    margin: 5px 0;
+
+    font-size: 22px;
+
+    color: #32231b;
+}
+
+.product-content p {
+    color: #8a7b70;
+
+    font-size: 14px;
+}
+
+
+/* BAS DE CARTE */
+
+.product-bottom {
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.product-bottom strong {
+    color: #a36d22;
+
+    font-size: 17px;
+}
+
+.product-bottom button {
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 25px;
+
+    background: #302018;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.product-bottom button:hover {
+    background: #c18a35;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   A PROPOS
+   ========================= */
+
+.about {
+    padding: 90px 10%;
+
+    text-align: center;
+
+    background: #2c1e17;
+
+    color: white;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+
+    color: #e4b65d;
+
+    font-size: 38px;
+}
+
+.about p {
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #e8ddd5;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact {
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background: #f5eee7;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+
+    font-size: 38px;
+
+    color: #38251b;
+}
+
+.contact p {
+    margin: 8px;
+
+    color: #6d5b4f;
+}
+
+.whatsapp-button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background: #2d9b58;
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================
+   PANIER
+   ========================= */
+
+.cart-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(20, 12, 8, 0.75);
+}
+
+.cart-box {
+    width: 100%;
+    max-width: 600px;
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    position: relative;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.cart-box h2 {
+    margin-bottom: 25px;
+
+    color: #342219;
+}
+
+.close-cart {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #eee;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.close-cart:hover {
+    background: #d8a74f;
+}
+
+
+#cart-items {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.cart-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: #f7f3ef;
+}
+
+
+.cart-total {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #ddd;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 20px;
+}
+
+.cart-total strong {
+    color: #a36d22;
+}
+
+
+.whatsapp-order {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #2d9b58;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.whatsapp-order:hover {
+    background: #247d46;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    padding: 45px 20px;
+
+    text-align: center;
+
+    background: #1d130f;
+
+    color: white;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+
+    color: #e3b65d;
+
+    letter-spacing: 1px;
+}
+
+footer p {
+    margin: 7px;
+
+    color: #cdbeb3;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE TABLETTE
+   ========================= */
+
+@media (max-width: 1100px) {
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        padding: 14px 4%;
+    }
+
+    .header nav {
+        gap: 18px;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .header nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+    .header nav a {
+        font-size: 13px;
+    }
+
+    .cart-button {
+        position: absolute;
+
+        top: 18px;
+        right: 15px;
+
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .hero {
+        min-height: 550px;
+
+        padding: 60px 25px;
+
+        background-position: center;
+    }
+
+    .hero h2 {
+        font-size: 43px;
+    }
+
+    .hero-content > p:not(.small-title) {
+        font-size: 16px;
+    }
+
+
+    .section-title {
+        padding-top: 60px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+
+    .products {
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .product-image {
+        height: 330px;
+    }
+
+
+    .about {
+        padding: 65px 25px;
+    }
+
+    .about h2,
+    .contact h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =========================
+   PETITS TELEPHONES
+   ========================= */
+
+@media (max-width: 420px) {
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .logo h1 {
+        font-size: 14px;
+    }
+
+    .logo-circle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .header nav {
+        gap: 12px;
+    }
+
+    .header nav a {
+        font-size: 12px;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+
+}

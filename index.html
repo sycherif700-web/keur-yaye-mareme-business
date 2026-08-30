@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KEUR YAYE MAREME BUSINESS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <div class="logo-circle">K</div>
+
+        <div>
+            <h1>KEUR YAYE MAREME</h1>
+            <span>BUSINESS</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#boutique">Boutique</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-button" onclick="ouvrirPanier()">
+        🛒 Panier (<span id="cart-count">0</span>)
+    </button>
+
+</header>
+
+
+<!-- ACCUEIL -->
+
+<section id="accueil" class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">BIENVENUE CHEZ</p>
+
+        <h2>
+            KEUR YAYE MAREME
+            <br>
+            <span>BUSINESS</span>
+        </h2>
+
+        <p>
+            Découvrez nos produits sélectionnés avec soin
+            et passez votre commande directement sur WhatsApp.
+        </p>
+
+        <a href="#boutique" class="hero-button">
+            Découvrir nos produits
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- BOUTIQUE -->
+
+<section id="boutique" class="shop">
+
+    <div class="section-title">
+
+        <p>NOTRE COLLECTION</p>
+
+        <h2>Nos produits</h2>
+
+        <span>Découvrez nos produits disponibles.</span>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <!-- PRODUIT 1 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="images/gowe-5000-1.jpg"
+                    alt="Gowé Bou Nexx grand format"
+                >
+
+                <span class="badge promo">
+                    POPULAIRE
+                </span>
+
+            </div>
+
+            <div class="product-content">
+
+                <small>GOWÉ BOU NEXX</small>
+
+                <h3>Gowé Bou Nexx</h3>
+
+                <p>Grand format</p>
+
+                <div class="product-bottom">
+
+                    <strong>5 000 FCFA</strong>
+
+                    <button onclick="ajouterAuPanier(
+                        'Gowé Bou Nexx - Grand format',
+                        5000,
+                        'images/gowe-5000-1.jpg'
+                    )">
+                        Ajouter 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUIT 2 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="images/gowe-2500-test.jpg"
+                    alt="Gowé Bou Nexx petit format"
+                >
+
+                <span class="badge promo">
+                    PROMO
+                </span>
+
+            </div>
+
+            <div class="product-content">
+
+                <small>GOWÉ BOU NEXX</small>
+
+                <h3>Gowé Bou Nexx</h3>
+
+                <p>Petit format</p>
+
+                <div class="product-bottom">
+
+                    <strong>2 500 FCFA</strong>
+
+                    <button onclick="ajouterAuPanier(
+                        'Gowé Bou Nexx - Petit format',
+                        2500,
+                        'images/gowe-2500-test.jpg'
+                    )">
+                        Ajouter 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUIT 3 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="images/gowe-5000-2.jpg"
+                    alt="Gowé Bou Nexx moyen format"
+                >
+
+                <span class="badge nouveau">
+                    NOUVEAU
+                </span>
+
+            </div>
+
+            <div class="product-content">
+
+                <small>GOWÉ BOU NEXX</small>
+
+                <h3>Gowé Bou Nexx</h3>
+
+                <p>Moyen format</p>
+
+                <div class="product-bottom">
+
+                    <strong>5 000 FCFA</strong>
+
+                    <button onclick="ajouterAuPanier(
+                        'Gowé Bou Nexx - Moyen format',
+                        5000,
+                        'images/gowe-5000-2.jpg'
+                    )">
+                        Ajouter 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUIT 4 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="images/diguidi-6000.jpg"
+                    alt="Diguïdi Bou Soft"
+                >
+
+                <span class="badge nouveau">
+                    NOUVEAU
+                </span>
+
+            </div>
+
+            <div class="product-content">
+
+                <small>DIGUIDI BOU SOFT</small>
+
+                <h3>Diguïdi Bou Soft</h3>
+
+                <p>Format disponible</p>
+
+                <div class="product-bottom">
+
+                    <strong>6 000 FCFA</strong>
+
+                    <button onclick="ajouterAuPanier(
+                        'Diguïdi Bou Soft',
+                        6000,
+                        'images/diguidi-6000.jpg'
+                    )">
+                        Ajouter 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- A PROPOS -->
+
+<section id="apropos" class="about">
+
+    <h2>À propos de nous</h2>
+
+    <p>
+        Bienvenue chez KEUR YAYE MAREME BUSINESS.
+        Nous proposons des produits sélectionnés avec soin
+        pour satisfaire nos clients.
+    </p>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <h2>Contact</h2>
+
+    <p>
+        📍 Yeumbeul / Dakar
+    </p>
+
+    <p>
+        📱 WhatsApp : 77 270 74 85
+    </p>
+
+    <a
+        href="https://wa.me/221772707485"
+        target="_blank"
+        class="whatsapp-button"
+    >
+        Commander sur WhatsApp
+    </a>
+
+</section>
+
+
+
+<!-- PANIER -->
+
+<div id="cart-modal" class="cart-modal">
+
+    <div class="cart-box">
+
+        <button class="close-cart" onclick="fermerPanier()">
+            ✕
+        </button>
+
+        <h2>🛒 Votre panier</h2>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-total">
+            Total :
+            <strong id="cart-total">0 FCFA</strong>
+        </div>
+
+        <button
+            class="whatsapp-order"
+            onclick="commanderWhatsApp()"
+        >
+            Commander sur WhatsApp
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>KEUR YAYE MAREME BUSINESS</h3>
+
+    <p>
+        © 2026 KEUR YAYE MAREME BUSINESS
+        <br>
+        Tous droits réservés.
+    </p>
+
+    <p>
+        📍 Yeumbeul / Dakar
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
