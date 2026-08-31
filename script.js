@@ -297,7 +297,7 @@ function commanderWhatsApp() {
     /* NUMERO WHATSAPP */
 
     const numero =
-        "221772707485";
+        "221776497199";
 
 
     /* LIEN WHATSAPP */
